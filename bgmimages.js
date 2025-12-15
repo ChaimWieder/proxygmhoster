@@ -9,9 +9,8 @@ function FindProxyForURL(url, host) {
         dnsDomainIs(host, "places.googleapis.com") ||
         shExpMatch(url, "*maps.googleapis.com/maps/api/place*")
     ) {
-        return "PROXY 0.0.0.0:0";  // Fake proxy → blocks connection
+        return "PROXY 0.0.0.0:0"; 
     }
 
-    // Everything else goes direct
     return "DIRECT";
 }
